@@ -549,7 +549,6 @@ body {
   .nav_container {
     justify-content: center;
     flex-wrap: wrap;
-    height: 80px;
   }
   .nav_container h1 {
     padding: 0px 15px 0px 15px;
@@ -580,7 +579,7 @@ body {
     font-size: 20px;
   }
 }
-@media (max-width: 901px) {
+@media screen (max-width: 901px) {
   .trailer video {
     max-width: 90%;
   }
