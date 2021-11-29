@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Christmas Project</title>
+    <meta name="author" content="Pyae Phyo Thaw"/>
+    <title>Christmas 2021</title>
+    <!-- Favicon ico (Website icon) -->
+    <link rel="shortcut icon" href="favicon.ico" />
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- Google Font -->
@@ -65,7 +68,7 @@
             </p>
             <!-- Video -->
             <div class="video">
-            <button class="play_btn" title="Play Video Now"><i class="fa fa-play"></i></button></div>
+            <button class="play_btn" title="Play Video"><i class="fa fa-play"></i></button></div>
             <div class="trailer">
                 <video src="video/Merry_Christmas.mp4" controls="true"></video>
         
@@ -96,22 +99,30 @@
                     click <span>EXPLORE MORE</span> for most post cards and wish.</p>
             </div>
             <div class="btn_container">
-                <button class="btn" title="Explore More"><i class="fas fa-heart" style="font-size: 22px;"></i> Explore more</button>
+                <a href="christmas.html"><button class="btn" title="Explore More"><i class="fas fa-heart" style="font-size: 22px;"></i> Explore more</button></a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="footer">
+      <!-- Go to up JavaScript -->
+      <script>
+        var mybutton = document.getElementById("myBtn");
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
       <div class="upbutton_container">
-        <a href="#" title="Go to Top"><button class="up_btn">
+        <button onclick="topFunction()" title="⮝" class="up_btn">
           <i class="fas fa-chevron-up"></i>
-        </button></a>
+        </button>
       </div>
         <p class="footer_text">
           <small>
             <p>&copy; 2021 Pyae Phyo Thaw</p>
-            <p>Made with <i class="fas fa-heart fa-fw"></i> from Pyae Phyo Thaw.</p>
+            <p>Made with <i class="fas fa-heart fa-fw"></i> from <a href="https://github.com/thaw98" target="_blank" class="author">Pyae Phyo Thaw</a>.</p>
             <p><i class="fas fa-star fa-fw"></i> Created on: 30th November 2021 <i class="fas fa-star fa-fw"></i></p>
           </small>
         </p>
