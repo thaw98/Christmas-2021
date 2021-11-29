@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Poppins&family=Teko&display=swap" rel="stylesheet">     <!-- Fontawesome -->
+    <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/503de85b9f.js"
       crossorigin="anonymous"
@@ -27,11 +28,30 @@
     <div class="body_container">
       <!-- Snow animation -->
       <div class="box">
+        <!-- Deer -->
         <img class="imgfloat_left" src="images/deer.png" />
+        <!-- Santa -->
         <img class="imgfloat_right" src="images/santa.png" />
+        <!-- Text Container -->
         <div class="text_container">
           <div class="welcome_container">
             <h1 class="merry"></h1>
+                        <!-- Javascript text typing -->
+                        <div id="text">
+                        </div>
+                        <script type="text/javascript">
+                          var i=0,text;
+                          text = "Christmas Vibes!!!"
+                        
+                          function typing() {
+                            if(i<text.length){
+                              document.getElementById("text").innerHTML += text.charAt(i);
+                              i++;
+                              setTimeout(typing,180);
+                            }
+                          }
+                          typing();
+                        </script>
             <img src="images/tree.png" alt="Christmas Tree" />
             <p class="firsttitle">Christmas is soon!</p>
             <p class="secondtitle">Hurry up to be ready!</p>
@@ -45,15 +65,14 @@
             </p>
             <!-- Video -->
             <div class="video">
-            <button class="play-btn"><i class="fa fa-play"></i></button></div>
+            <button class="play_btn" title="Play Video Now"><i class="fa fa-play"></i></button></div>
             <div class="trailer">
                 <video src="video/Merry_Christmas.mp4" controls="true"></video>
         
-                <span class="close">&times;</span>
+                <span class="close" title="Close">&times;</span>
             </div>
-        
             <script>
-                const button = document.querySelector(".play-btn");
+                const button = document.querySelector(".play_btn");
                 const close = document.querySelector(".close");
                 const trailer = document.querySelector(".trailer");
                 const video = document.querySelector("video");
@@ -77,20 +96,25 @@
                     click <span>EXPLORE MORE</span> for most post cards and wish.</p>
             </div>
             <div class="btn_container">
-                <button class="btn"><i class="fas fa-heart"></i> Explore more</button>
+                <button class="btn" title="Explore More"><i class="fas fa-heart" style="font-size: 22px;"></i> Explore more</button>
             </div>
           </div>
         </div>
-        <div class="upbutton_container">
-            <button class="button-29" role="button">
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            <!-- <button class="button-30" role="button"></button> -->
-          </div>
       </div>
     </div>
     <div class="footer">
-        Copyright
+      <div class="upbutton_container">
+        <a href="#" title="Go to Top"><button class="up_btn">
+          <i class="fas fa-chevron-up"></i>
+        </button></a>
+      </div>
+        <p class="footer_text">
+          <small>
+            <p>&copy; 2021 Pyae Phyo Thaw</p>
+            <p>Made with <i class="fas fa-heart fa-fw"></i> from Pyae Phyo Thaw.</p>
+            <p><i class="fas fa-star fa-fw"></i> Created on: 30th November 2021 <i class="fas fa-star fa-fw"></i></p>
+          </small>
+        </p>
     </div>
   </body>
 </html>
