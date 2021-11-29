@@ -1,0 +1,494 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.body_container {
+  background: url("images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1600px;
+  min-width: 400px;
+}
+/*👉CSS Variable for setting color👈*/
+:root {
+  --clr-red: #b11e31;
+  --clr-orange: #ff6600;
+}
+/*👉Navigation👈*/
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: var(--clr-red);
+  font-size: 26px;
+  width: 100%;
+  min-width: 400px;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+.nav_container h1 {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 0.8;
+  background: linear-gradient(90deg, var(--clr-red), #fff, var(--clr-red));
+  background-size: 80% 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  font-family: "Teko", sans-serif;
+}
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+/*👉Merry Christmas and New Year Text👈*/
+.merry::before {
+  content: "";
+  animation: textchange infinite 10s;
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  text-shadow: 2px 3px 2px black;
+}
+@keyframes textchange {
+  0% {
+    content: "Merry Chrstmas!";
+  }
+  20% {
+    content: "We wish you";
+  }
+  40% {
+    content: "a Merry Christmas";
+  }
+  80% {
+    content: "and...";
+  }
+  100% {
+    content: "Happy New Year!";
+  }
+}
+.top_img {
+  height: 80px;
+  padding: 0px 10px 0px 10px;
+}
+/*👉Box and snowy effect👈*/
+.box {
+  width: 100%;
+  position: absolute;
+  background-image: url("images/1.png"), url("images/2.png"),
+    url("images/3.png");
+  animation: snow1 20s linear infinite;
+}
+@keyframes snow1 {
+  from {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+/*👉Text container and welcome container👈*/
+.text_container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+}
+.welcome_container {
+  text-align: center;
+}
+.welcome_container img {
+  width: 300px;
+  text-align: center;
+}
+.welcome_container .para {
+  white-space: pre-line;
+  line-height: 40px;
+}
+.firsttitle {
+  font-size: 60px;
+  font-family: "Pacifico", cursive;
+  animation: colorchange 10s linear infinite forwards;
+  background: repeating-linear-gradient(
+    -45deg,
+    white 0%,
+    red 4.5%,
+    yellow 7.14%,
+    rgb(0, 255, 255) 21.4%,
+    cyan 28.56%,
+    magenta 42.84%,
+    red 48%,
+    white 50%
+  );
+  background-size: 600vw 600vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+@keyframes colorchange {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 600vw;
+  }
+}
+.secondtitle {
+  font-size: 40px;
+  font-family: "Pacifico", cursive;
+}
+.secondtitle::after {
+  content: "";
+  display: block;
+  background-color: white;
+  width: 100px;
+  height: 3px;
+  margin: auto;
+  margin-top: 30px;
+}
+.heart {
+  animation: heart 4s infinite;
+  font-size: 25px;
+}
+@keyframes heart {
+  0% {
+    color: red;
+  }
+  20% {
+    color: pink;
+  }
+  40% {
+    color: magenta;
+  }
+  60% {
+    color: white;
+  }
+  100% {
+    color: purple;
+  }
+}
+/*👉Another text👈*/
+.morecards p {
+  white-space: pre-line;
+}
+.morecards p span {
+  font-weight: bold;
+  animation: blink 1.5s linear infinite;
+  font-size: 28px;
+}
+@keyframes blink {
+  50% {
+    opacity: 0%;
+  }
+}
+/*👉Button👈*/
+.btn_container {
+  margin-top: 20px;
+}
+.btn {
+  width: 240px;
+  height: 55px;
+  padding: 5px;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 0 white;
+  transition: ease 0.5s;
+  outline: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.btn:hover {
+  box-shadow: inset 0 55px 0 0 white;
+  cursor: pointer;
+  color: var(--clr-red);
+}
+/*👉Button up👈*/
+.upbutton_container {
+  margin-top: 200px;
+  text-align: center;
+  min-width: 400px;
+}
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 50%;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 80px;
+  width: 80px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 40px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+/*👉.button-30 {
+  background-color: #fcfcfd;
+  border-radius: 50%;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  height: 100px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.15s, transform 0.15s;
+  font-size: 50px;
+}
+
+.button-30:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}👈*/
+/*👉Deer and santa image👈*/
+.imgfloat_left {
+  position: fixed;
+  z-index: 1;
+  top: 120px;
+  left: 0px;
+  width: 140px;
+}
+.imgfloat_right {
+  position: fixed;
+  z-index: 1;
+  top: 120px;
+  right: 0px;
+  width: 140px;
+}
+/*👉Video👈*/
+.video {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: var(--clr-orange);
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  border-radius: 100%;
+  position: relative;
+  border: none;
+}
+.play-btn:before {
+  content: "";
+  position: absolute;
+  border: 15px solid var(--clr-orange);
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom1 1.5s linear infinite;
+  opacity: 0;
+  z-index: 1;
+}
+.play-btn:after {
+  content: "";
+  position: absolute;
+  border: 15px solid var(--clr-orange);
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom2 1.5s linear infinite;
+  opacity: 0;
+  animation-delay: 0.4s;
+  z-index: 1;
+}
+.play-btn:hover {
+  background-color: var(--clr-red);
+  color: #ffffff;
+}
+.play-btn:hover::before {
+  content: "";
+  position: absolute;
+  border: 15px solid #ffffff;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom1 1.5s linear infinite;
+  opacity: 0;
+  z-index: 1;
+}
+@keyframes bloom1 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes bloom2 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+}
+.trailer video {
+  max-width: 900px;
+  outline: none;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  font-size: 60px;
+  cursor: pointer;
+}
+/*👉Footer👈*/
+.footer {
+  background-color: pink;
+}
+@media screen and (max-width: 790px) {
+  .nav_container {
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 80px;
+  }
+  .nav_container h1 {
+    padding: 0px 15px 0px 15px;
+  }
+  .top_img {
+    display: none;
+  }
+}
+@media screen and (max-width: 770px) {
+  .imgfloat_left,
+  .imgfloat_right {
+    display: none;
+  }
+  .btn {
+    width: 100%;
+  }
+  .welcome_container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .btn_container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .nav_container {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .upbutton_container {
+    display: none;
+  }
+  .body_container {
+    height: 2000px;
+  }
+}
+@media (max-width: 901px) {
+  .trailer video {
+    max-width: 90%;
+  }
+}

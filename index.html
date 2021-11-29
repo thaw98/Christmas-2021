@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Project</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Poppins&family=Teko&display=swap" rel="stylesheet">     <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/503de85b9f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="all.min.js"></script>
+  </head>
+    <div class="nav_container">
+      <img class="top_img" src="images/top_img.png" />
+      <h1>
+        Merry Christmas 2021
+        <i class="fas fa-tree fa-fw"></i>
+      </h1>
+      <img class="top_img" src="images/top_imgright.png" />
+    </div>
+    <div class="body_container">
+      <!-- Snow animation -->
+      <div class="box">
+        <img class="imgfloat_left" src="images/deer.png" />
+        <img class="imgfloat_right" src="images/santa.png" />
+        <div class="text_container">
+          <div class="welcome_container">
+            <h1 class="merry"></h1>
+            <img src="images/tree.png" alt="Christmas Tree" />
+            <p class="firsttitle">Christmas is soon!</p>
+            <p class="secondtitle">Hurry up to be ready!</p>
+            <p class="para">
+                We may not be together on Christmas day,
+                But my heart <span class="heart"><i class="fas fa-heart"></i></span> and soul will always be with you.
+                My warmest greetings to you
+                Have a great and wonderful Christmas!
+                May this holiday season be full of surprises and cheers, 
+                Simply because you deserved the best.
+            </p>
+            <!-- Video -->
+            <div class="video">
+            <button class="play-btn"><i class="fa fa-play"></i></button></div>
+            <div class="trailer">
+                <video src="video/Merry_Christmas.mp4" controls="true"></video>
+        
+                <span class="close">&times;</span>
+            </div>
+        
+            <script>
+                const button = document.querySelector(".play-btn");
+                const close = document.querySelector(".close");
+                const trailer = document.querySelector(".trailer");
+                const video = document.querySelector("video");
+        
+                button.addEventListener('click', ()=>{
+                    trailer.style.visibility = "visible";
+                    trailer.style.opacity = 1;
+                });
+        
+                close.addEventListener('click', ()=>{
+                    trailer.style.visibility = "hidden";
+                    trailer.style.opacity = 0;
+        
+                    video.pause();
+                    video.currentTime = 0;
+                });
+            </script>
+            <!-- Video close -->
+            <div class="morecards">
+                <p>If you want to read more on Christmas wish, 
+                    click <span>EXPLORE MORE</span> for most post cards and wish.</p>
+            </div>
+            <div class="btn_container">
+                <button class="btn"><i class="fas fa-heart"></i> Explore more</button>
+            </div>
+          </div>
+        </div>
+        <div class="upbutton_container">
+            <button class="button-29" role="button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <!-- <button class="button-30" role="button"></button> -->
+          </div>
+      </div>
+    </div>
+    <div class="footer">
+        Copyright
+    </div>
+  </body>
+</html>
