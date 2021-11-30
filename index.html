@@ -4,22 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Pyae Phyo Thaw"/>
+    <meta name="author" content="Pyae Phyo Thaw" />
     <title>Christmas 2021</title>
     <!-- Favicon ico (Website icon) -->
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Poppins&family=Teko&display=swap" rel="stylesheet">     <!-- Fontawesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Poppins&family=Teko&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome -->
     <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/503de85b9f.js"
       crossorigin="anonymous"
     ></script>
   </head>
+  <body>
     <div class="nav_container">
       <img class="top_img" src="images/top_img.png" />
       <h1>
@@ -39,67 +44,76 @@
         <div class="text_container">
           <div class="welcome_container">
             <h1 class="merry"></h1>
-                        <!-- Javascript text typing -->
-                        <div id="text">
-                        </div>
-                        <script type="text/javascript">
-                          var i=0,text;
-                          text = "Christmas Vibes!!!"
-                        
-                          function typing() {
-                            if(i<text.length){
-                              document.getElementById("text").innerHTML += text.charAt(i);
-                              i++;
-                              setTimeout(typing,180);
-                            }
-                          }
-                          typing();
-                        </script>
+            <!-- Javascript text typing -->
+            <div id="text"></div>
+            <script type="text/javascript">
+              var i = 0,
+                text;
+              text = "Christmas Vibes!!!";
+
+              function typing() {
+                if (i < text.length) {
+                  document.getElementById("text").innerHTML += text.charAt(i);
+                  i++;
+                  setTimeout(typing, 180);
+                }
+              }
+              typing();
+            </script>
             <img src="images/tree.png" alt="Christmas Tree" />
             <p class="firsttitle">Christmas is soon!</p>
             <p class="secondtitle">Hurry up to be ready!</p>
             <p class="para">
-                We may not be together on Christmas day,
-                But my heart <span class="heart"><i class="fas fa-heart"></i></span> and soul will always be with you.
-                My warmest greetings to you
-                Have a great and wonderful Christmas!
-                May this holiday season be full of surprises and cheers, 
-                Simply because you deserved the best.
+              We may not be together on Christmas day, But my heart
+              <span class="heart"><i class="fas fa-heart"></i></span> and soul
+              will always be with you. My warmest greetings to you Have a great
+              and wonderful Christmas! May this holiday season be full of
+              surprises and cheers, Simply because you deserved the best.
             </p>
             <!-- Video -->
             <div class="video">
-            <button class="play_btn" title="Play Video"><i class="fa fa-play"></i></button></div>
+              <button class="play_btn" title="Play Video">
+                <i class="fa fa-play"></i>
+              </button>
+            </div>
             <div class="trailer">
-                <video src="video/Merry_Christmas.mp4" controls="true"></video>
-        
-                <span class="close" title="Close">&times;</span>
+              <video src="video/Merry_Christmas.mp4" controls="true"></video>
+
+              <span class="close" title="Close">&times;</span>
             </div>
             <script>
-                const button = document.querySelector(".play_btn");
-                const close = document.querySelector(".close");
-                const trailer = document.querySelector(".trailer");
-                const video = document.querySelector("video");
-        
-                button.addEventListener('click', ()=>{
-                    trailer.style.visibility = "visible";
-                    trailer.style.opacity = 1;
-                });
-        
-                close.addEventListener('click', ()=>{
-                    trailer.style.visibility = "hidden";
-                    trailer.style.opacity = 0;
-        
-                    video.pause();
-                    video.currentTime = 0;
-                });
+              const button = document.querySelector(".play_btn");
+              const close = document.querySelector(".close");
+              const trailer = document.querySelector(".trailer");
+              const video = document.querySelector("video");
+
+              button.addEventListener("click", () => {
+                trailer.style.visibility = "visible";
+                trailer.style.opacity = 1;
+              });
+
+              close.addEventListener("click", () => {
+                trailer.style.visibility = "hidden";
+                trailer.style.opacity = 0;
+
+                video.pause();
+                video.currentTime = 0;
+              });
             </script>
             <!-- Video close -->
             <div class="morecards">
-                <p>If you want to read more on Christmas wish, 
-                    click <span>EXPLORE MORE</span> for most post cards and wish.</p>
+              <p>
+                If you want to read more on Christmas wish, click
+                <span>EXPLORE MORE</span> for most post cards and wish.
+              </p>
             </div>
             <div class="btn_container">
-                <a href="christmas.html"><button class="btn" title="Explore More"><i class="fas fa-heart" style="font-size: 22px;"></i> Explore more</button></a>
+              <a href="christmas.html"
+                ><button class="btn" title="Explore More">
+                  <i class="fas fa-heart" style="font-size: 22px"></i> Explore
+                  more
+                </button></a
+              >
             </div>
           </div>
         </div>
@@ -110,22 +124,30 @@
       <script>
         var mybutton = document.getElementById("myBtn");
         function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
       </script>
       <div class="upbutton_container">
         <button onclick="topFunction()" title="⮝UP" class="up_btn">
           <i class="fas fa-chevron-up"></i>
         </button>
       </div>
-        <p class="footer_text">
-          <small>
-            <p>&copy; 2021 Pyae Phyo Thaw</p>
-            <p>Made with <i class="fas fa-heart fa-fw"></i> from <a href="https://github.com/thaw98" target="_blank" class="author">Pyae Phyo Thaw</a>.</p>
-            <p><i class="fas fa-star fa-fw"></i> Created on: 30th November 2021 <i class="fas fa-star fa-fw"></i></p>
-          </small>
-        </p>
+      <p class="footer_text">
+        <small>
+          <p>&copy; 2021 Pyae Phyo Thaw</p>
+          <p>
+            Made with <i class="fas fa-heart fa-fw"></i> from
+            <a href="https://github.com/thaw98" target="_blank" class="author"
+              >Pyae Phyo Thaw</a
+            >.
+          </p>
+          <p>
+            <i class="fas fa-star fa-fw"></i> Created on: 30th November 2021
+            <i class="fas fa-star fa-fw"></i>
+          </p>
+        </small>
+      </p>
     </div>
   </body>
 </html>
