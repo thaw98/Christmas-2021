@@ -92,6 +92,7 @@ body {
   background-attachment: scroll;
   width: 100%;
   min-width: 400px;
+  padding-bottom: 160px;
 }
 /*👉Text container👈*/
 .text_container {
@@ -102,9 +103,8 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 40px;
-  padding-bottom: 140px;
   min-width: 400px;
-  animation: slideup 2s linear;
+  animation: slideup 3s ease-in-out;
 }
 @keyframes slideup {
   from {
@@ -131,6 +131,18 @@ body {
 .text_right img {
   width: 400px;
   min-width: 400px;
+  animation: flip 3s 1 4s linear;
+}
+@keyframes flip {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 /*👉Video👈*/
 .video_container {
@@ -221,5 +233,10 @@ body {
   .video_container {
     display: flex;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 901px) {
+  .trailer video {
+    max-width: 90%;
   }
 }
