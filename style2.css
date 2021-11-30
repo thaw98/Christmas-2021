@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  color: white;
+}
+/*👉CSS Variable for setting color👈*/
+:root {
+  --clr-red: #b11e31;
+  --clr-orange: #ff6600;
+}
+/*👉Navigation👈*/
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: var(--clr-red);
+  font-size: 26px;
+  width: 100%;
+  min-width: 400px;
+  box-shadow: 2px 2px 3px white;
+  color: #ffffff;
+  animation: borderglow 4s linear infinite;
+}
+/*👉Border Glow animation👈*/
+@keyframes borderglow {
+  0% {
+    box-shadow: 2px 2px 3px white;
+  }
+  20% {
+    box-shadow: 2px 2px 10px white;
+  }
+  50% {
+    box-shadow: 4px 4px 20px white;
+  }
+  60% {
+    box-shadow: 6px 6px 25px white;
+  }
+  65% {
+    box-shadow: 6px 6px 25px white;
+  }
+  70% {
+    box-shadow: 6px 6px 25px white;
+  }
+  8% {
+    box-shadow: 6px 6px 20px white;
+  }
+  90% {
+    box-shadow: 2px 2px 10px white;
+  }
+  100% {
+    box-shadow: 2px 2px 3px white;
+  }
+}
+.nav_container h1 {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: linear-gradient(90deg, var(--clr-red), #ffffff, var(--clr-red));
+  background-size: 80% 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  font-family: "Teko", sans-serif;
+  align-items: center;
+}
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+.top_img {
+  height: 80px;
+  padding: 0px 10px 0px 10px;
+}
+/*👉Home container👈*/
+.home_container {
+  background: url("images/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  width: 100%;
+  min-width: 400px;
+}
+/*👉Text container👈*/
+.text_container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 140px;
+  min-width: 400px;
+  animation: slideup 2s linear;
+}
+@keyframes slideup {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.text_left {
+  line-height: 40px;
+}
+.text_left h1 {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 5px;
+  text-shadow: 4px 4px 2px black;
+  line-height: 50px;
+}
+.text_left p {
+  text-shadow: 3px 3px 2px black;
+}
+.text_right img {
+  width: 400px;
+  min-width: 400px;
+}
+/*👉Video👈*/
+.video_container {
+  padding-top: 10px;
+}
+.video {
+  display: flex;
+  justify-content: left;
+  /*👉  margin-top: 50px;
+  margin-bottom: 50px;👈*/
+}
+.play_btn {
+  border: none;
+  background: linear-gradient(to right, #6b0000, #fa1010);
+  color: #ffff;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 2px white;
+}
+.play_btn::before {
+  content: "";
+  height: 160%;
+  width: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: -20px;
+  transform: translateX(-80px) rotate(20deg);
+  transition: all 0.5s;
+}
+
+.play_btn:hover::before {
+  transform: translateX(230px) rotate(20deg);
+}
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+}
+.trailer video {
+  max-width: 900px;
+  outline: none;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 60px;
+  cursor: pointer;
+  transition: 1s;
+}
+.close:hover {
+  transform: rotate(360deg);
+}
+/*👉Responsive👈*/
+@media screen and (max-width: 790px) {
+  .nav_container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav_container h1 {
+    padding: 0px 15px 0px 15px;
+  }
+  .top_img {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .text_container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .video_container {
+    display: flex;
+    justify-content: center;
+  }
+}
