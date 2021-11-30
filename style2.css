@@ -5,13 +5,14 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
-body {
-  color: white;
-}
 /*👉CSS Variable for setting color👈*/
 :root {
   --clr-red: #b11e31;
-  --clr-orange: #ff6600;
+}
+/*👉The whole body👈*/
+.body_container {
+  background: url("images/bg.svg");
+  background-attachment: fixed;
 }
 /*👉Navigation👈*/
 .nav_container {
@@ -92,7 +93,8 @@ body {
   background-attachment: scroll;
   width: 100%;
   min-width: 400px;
-  padding-bottom: 160px;
+  padding-bottom: 350px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
 /*👉Text container👈*/
 .text_container {
@@ -104,11 +106,11 @@ body {
   padding-right: 40px;
   padding-top: 40px;
   min-width: 400px;
-  animation: slideup 3s ease-in-out;
+  color: white;
 }
 @keyframes slideup {
   from {
-    transform: translateY(30px);
+    transform: translateY(40px);
     opacity: 0;
   }
   to {
@@ -116,34 +118,109 @@ body {
     opacity: 1;
   }
 }
+.text_left_title {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 .text_left {
   line-height: 40px;
+  animation: slideup 3s ease-in-out;
 }
-.text_left h1 {
+.text_left_title h1 {
   font-family: "Pacifico", cursive;
   letter-spacing: 5px;
   text-shadow: 4px 4px 2px black;
   line-height: 50px;
 }
+.text_left_title .jingle_bell {
+  width: 70px;
+  height: 70px;
+  animation: ringing 1s infinite ease-in-out;
+}
+@keyframes ringing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: scale(-70deg);
+  }
+}
+.text_left_title .calender {
+  width: 70px;
+  height: 70px;
+  animation: scalein 3.5s infinite ease-in-out 4s;
+}
+@keyframes scalein {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .text_left p {
   text-shadow: 3px 3px 2px black;
+}
+.text_right {
+  animation: slidedown 3s ease-in;
 }
 .text_right img {
   width: 400px;
   min-width: 400px;
-  animation: flip 3s 1 4s linear;
+  /*👉    animation: rotate 12s 3 5s;👈*/
+  animation: rotate 3s infinite 4s;
 }
-@keyframes flip {
+@keyframes slidedown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate {
   0% {
-    transform: scaleX(1);
+    transform: rotate(0deg);
   }
   50% {
-    transform: scaleX(-1);
+    transform: rotate(10deg);
   }
   100% {
-    transform: scaleX(1);
+    transform: scale(-10deg);
   }
 }
+/*👉@keyframes rotate {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1) rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}👈*/
 /*👉Video👈*/
 .video_container {
   padding-top: 10px;
@@ -164,7 +241,19 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 0px 10px 2px white;
+  box-shadow: 0px 0px 20px 2px white;
+  animation: buttonglow 2s infinite ease;
+}
+@keyframes buttonglow {
+  0% {
+    box-shadow: 0px 0px 10px 2px white;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 2px white;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 2px white;
+  }
 }
 .play_btn::before {
   content: "";
@@ -212,6 +301,110 @@ body {
 .close:hover {
   transform: rotate(360deg);
 }
+/*👉Envelope+Heading👈*/
+.envelope_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 190px;
+  min-width: 400px;
+}
+.envelope_big {
+  width: 100%;
+  min-width: 400px;
+}
+.envelope_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.envelope_heading h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  letter-spacing: 10px;
+  color: #3d6cb9;
+  text-align: center;
+}
+.envelope_heading .icon {
+  width: 90px;
+  height: 90px;
+}
+.envelope_heading h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #3d6cb9;
+  margin: auto;
+}
+/*👉Envelope mail start👈*/
+.main {
+  padding-bottom: 190px;
+}
+.mail {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  background-color: #3399ff;
+  border-radius: 0px 0px 20px 20px;
+  transform-style: preserve-3d;
+  perspective: 700px;
+  cursor: pointer;
+}
+.mail:before {
+  content: "";
+  position: absolute;
+  border-left: 200px solid transparent;
+  border-right: 200px solid #0066cc;
+  border-top: 150px solid transparent;
+  border-bottom: 150px solid #0066cc;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 5;
+}
+.mail:after {
+  content: "";
+  position: absolute;
+  border-left: 200px solid #0073e6;
+  border-right: 200px solid transparent;
+  border-top: 150px solid transparent;
+  border-bottom: 150px solid #0073e6;
+  border-radius: 0px 0px 20px 20px;
+}
+.mail .cover {
+  position: absolute;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 150px solid #3399ff;
+  border-bottom: 150px solid transparent;
+  transform-origin: top;
+  transition: 1s 1s ease;
+  z-index: 4;
+}
+.mail:hover .cover {
+  transform: rotateX(180deg);
+  transition: 1s ease;
+}
+.mail .letter {
+  position: absolute;
+  width: 380px;
+  left: 10px;
+  height: 290px;
+  top: 10px;
+  background-color: white;
+  border-radius: 0px 0px 20px 20px;
+  transition: 1s ease;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.mail .letter h2 {
+  text-transform: uppercase;
+}
+.mail:hover .letter {
+  top: -140px;
+  transition: 1s 1s ease;
+}
+/*👉End👈*/
 /*👉Responsive👈*/
 @media screen and (max-width: 790px) {
   .nav_container {
@@ -238,5 +431,34 @@ body {
 @media screen and (max-width: 901px) {
   .trailer video {
     max-width: 90%;
+  }
+}
+@media screen and (max-width: 779px) {
+  .envelope_heading {
+    flex-direction: column;
+  }
+  .envelope_heading::before {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 3px;
+    background: #3d6cb9;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .envelope_heading::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 3px;
+    background: #3d6cb9;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .envelope_heading h1 {
+    font-size: 40px;
+  }
+  .envelope_heading h1::after {
+    display: none;
   }
 }

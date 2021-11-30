@@ -25,66 +25,119 @@
     ></script>
   </head>
   <body>
-    <!-- Home container + nav -->
-    <div class="home_container">
-      <div class="nav_container">
-        <img class="top_img" src="images/top_img.png" />
-        <h1>
-          Merry Christmas 2021
-          <i class="fas fa-tree fa-fw"></i>
-        </h1>
-        <img class="top_img" src="images/top_imgright.png" />
-      </div>
-      <div class="text_container">
-        <div class="text_left">
-          <h1>Santa Claus Is Coming To Town</h1>
-          <p>
-            Santa Claus, also known as Father Christmas, Saint Nicholas, Saint
-            Nick, Kris Kringle, or simply Santa, is a legendary character
-            originating in Western Christian culture who is said to bring gifts
-            on Christmas Eve of toys and candy to well-behaved children, and
-            either coal or nothing to naughty children.
-          </p>
-          <div class="video_container">
-            <!-- Video -->
-            <div class="video">
-              <button class="play_btn" title="Watch Now">
-                <i class="fa fa-play"></i> Watch Now
-              </button>
+    <div class="body_container">
+      <!-- Home container + nav -->
+      <div class="home_container">
+        <div class="nav_container">
+          <img class="top_img" src="images/top_img.png" />
+          <h1>
+            Merry Christmas 2021
+            <i class="fas fa-tree fa-fw"></i>
+          </h1>
+          <img class="top_img" src="images/top_imgright.png" />
+        </div>
+        <div class="text_container">
+          <div class="text_left">
+            <div class="text_left_title">
+              <img
+                src="images/jingle_bell.svg"
+                class="jingle_bell"
+                alt="Jingle Bell"
+              />
+              <h1>Santa Claus Is Coming To Town</h1>
+              <img
+                src="images/calendar.svg"
+                class="calender"
+                alt="25th Decemeber"
+              />
             </div>
-            <div class="trailer">
-              <video src="video/SantaClaus.mp4" controls="true"></video>
+            <p>
+              Santa Claus, also known as Father Christmas, Saint Nicholas, Saint
+              Nick, Kris Kringle, or simply Santa, is a legendary character
+              originating in Western Christian culture who is said to bring
+              gifts on Christmas Eve of toys and candy to well-behaved children,
+              and either coal or nothing to naughty children.
+            </p>
+            <div class="video_container">
+              <!-- Video -->
+              <div class="video">
+                <button class="play_btn" title="Watch Now">
+                  <i class="fa fa-play"></i> Watch Now
+                </button>
+              </div>
+              <div class="trailer">
+                <video src="video/SantaClaus.mp4" controls="true"></video>
 
-              <span class="close" title="Close">&times;</span>
+                <span class="close" title="Close">&times;</span>
+              </div>
+              <script>
+                const button = document.querySelector(".play_btn");
+                const close = document.querySelector(".close");
+                const trailer = document.querySelector(".trailer");
+                const video = document.querySelector("video");
+
+                button.addEventListener("click", () => {
+                  trailer.style.visibility = "visible";
+                  trailer.style.opacity = 1;
+                });
+
+                close.addEventListener("click", () => {
+                  trailer.style.visibility = "hidden";
+                  trailer.style.opacity = 0;
+
+                  video.pause();
+                  video.currentTime = 0;
+                });
+              </script>
+              <!-- Video close -->
             </div>
-            <script>
-              const button = document.querySelector(".play_btn");
-              const close = document.querySelector(".close");
-              const trailer = document.querySelector(".trailer");
-              const video = document.querySelector("video");
-
-              button.addEventListener("click", () => {
-                trailer.style.visibility = "visible";
-                trailer.style.opacity = 1;
-              });
-
-              close.addEventListener("click", () => {
-                trailer.style.visibility = "hidden";
-                trailer.style.opacity = 0;
-
-                video.pause();
-                video.currentTime = 0;
-              });
-            </script>
-            <!-- Video close -->
+          </div>
+          <div class="text_right">
+            <img src="images/santa_claus.png" alt="Santa Claus" />
           </div>
         </div>
-        <div class="text_right">
-          <img src="images/santa_claus.png" alt="Santa Claus" />
+      </div>
+
+      <!-- Enevelope section -->
+      <div class="envelope_big">
+        <div class="envelope_heading">
+          <img src="images/snowman.svg" class="icon" alt="Snow Man" />
+          <h1>Letters to Santa Claus</h1>
+          <img src="images/candy.svg" class="icon" alt="Candy Canes" />
+        </div>
+        <div class="envelope_container">
+          <!-- 1 Envelope -->
+          <div class="main">
+            <div class="mail">
+              <div class="cover"></div>
+              <div class="letter">
+                <h2>Welcome</h2>
+              </div>
+            </div>
+          </div>
+          <!-- 2 Envelope -->
+          <div class="main">
+            <div class="mail">
+              <div class="cover"></div>
+              <div class="letter">
+                <h2>Welcome</h2>
+              </div>
+            </div>
+          </div>
+          <!-- 3 Envelope -->
+          <div class="main">
+            <div class="mail">
+              <div class="cover"></div>
+              <div class="letter">
+                <h2>Welcome</h2>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="contact">
+        <div class="contact_container"></div>
+      </div>
     </div>
-    <!-- Enevelope section -->
-    <div class="envelope_container"></div>
   </body>
 </html>
