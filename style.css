@@ -579,7 +579,7 @@ body {
     font-size: 20px;
   }
 }
-@media screen (max-width: 901px) {
+@media screen and (max-width: 901px) {
   .trailer video {
     max-width: 90%;
   }
