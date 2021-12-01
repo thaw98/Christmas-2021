@@ -101,7 +101,6 @@
   padding-top: 40px;
   min-width: 400px;
   color: white;
-  width: 100%;
 }
 @keyframes slideup {
   from {
@@ -1015,7 +1014,7 @@
     display: none;
   }
 }
-@media (max-width: 1000px) {
+@media screen and(max-width: 1000px) {
   .content .image-box {
     max-width: 70%;
   }
@@ -1023,7 +1022,7 @@
     padding: 10px 0;
   }
 }
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .content .image-box {
     display: none;
   }
