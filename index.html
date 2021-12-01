@@ -18,11 +18,12 @@
       rel="stylesheet"
     />
     <!-- Fontawesome -->
-    <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/503de85b9f.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Snow effect -->
+    <script src="snowstorm.js"></script>
   </head>
   <body>
     <div class="nav_container">
@@ -34,91 +35,90 @@
       <img class="top_img" src="images/top_imgright.png" />
     </div>
     <div class="body_container">
-      <!-- Snow animation -->
-      <div class="box">
-        <!-- Deer -->
-        <img class="imgfloat_left" src="images/deer.png" />
-        <!-- Santa -->
-        <img class="imgfloat_right" src="images/santa.png" />
-        <!-- Text Container -->
-        <div class="text_container">
-          <div class="welcome_container">
-            <h1 class="merry"></h1>
-            <!-- Javascript text typing -->
-            <div id="text"></div>
-            <script type="text/javascript">
-              var i = 0,
-                text;
-              text = "Christmas Vibes!!!";
+      <!-- Deer -->
+      <img class="imgfloat_left" src="images/deer.png" />
+      <!-- Santa -->
+      <img class="imgfloat_right" src="images/santa.png" />
+      <!-- Text Container -->
+      <div class="text_container">
+        <div class="welcome_container">
+          <h1 class="merry"></h1>
+          <!-- Javascript text typing -->
+          <div id="text"></div>
+          <script type="text/javascript">
+            var i = 0,
+              text;
+            text = "Christmas Vibes!!!";
 
-              function typing() {
-                if (i < text.length) {
-                  document.getElementById("text").innerHTML += text.charAt(i);
-                  i++;
-                  setTimeout(typing, 180);
-                }
+            function typing() {
+              if (i < text.length) {
+                document.getElementById("text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, 180);
               }
-              typing();
-            </script>
-            <img src="images/tree.png" alt="Christmas Tree" />
-            <p class="firsttitle">Christmas is soon!</p>
-            <p class="secondtitle">Hurry up to be ready!</p>
-            <p class="para">
-              We may not be together on Christmas day, But my heart
-              <span class="heart"><i class="fas fa-heart"></i></span> and soul
-              will always be with you. My warmest greetings to you Have a great
-              and wonderful Christmas! May this holiday season be full of
-              surprises and cheers, Simply because you deserved the best.
+            }
+            typing();
+          </script>
+          <img src="images/tree.png" alt="Christmas Tree" />
+          <p class="firsttitle">Christmas is soon!</p>
+          <p class="secondtitle">Hurry up to be ready!</p>
+          <p class="para">
+            We may not be together on Christmas day, 
+            But my heart <span class="heart"><i class="fas fa-heart"></i></span> and soul will always be with you.
+            My warmest greetings to you,
+            Have a great and wonderful Christmas!
+            May this holiday season be full of surprises and cheers,
+            Simply because you deserved the best.
+          </p>
+          <!-- Video -->
+          <div class="video">
+            <button class="play_btn" title="Play Video">
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+          <div class="trailer">
+            <video src="video/Merry_Christmas.mp4" controls="true"></video>
+
+            <span class="close" title="Close">&times;</span>
+          </div>
+          <script>
+            const button = document.querySelector(".play_btn");
+            const close = document.querySelector(".close");
+            const trailer = document.querySelector(".trailer");
+            const video = document.querySelector("video");
+
+            button.addEventListener("click", () => {
+              trailer.style.visibility = "visible";
+              trailer.style.opacity = 1;
+            });
+
+            close.addEventListener("click", () => {
+              trailer.style.visibility = "hidden";
+              trailer.style.opacity = 0;
+
+              video.pause();
+              video.currentTime = 0;
+            });
+          </script>
+          <!-- Video close -->
+          <div class="morecards">
+            <p>
+              If you want to read more on Christmas wish, click
+              <span>EXPLORE MORE</span> for most post cards and wish.
             </p>
-            <!-- Video -->
-            <div class="video">
-              <button class="play_btn" title="Play Video">
-                <i class="fa fa-play"></i>
-              </button>
-            </div>
-            <div class="trailer">
-              <video src="video/Merry_Christmas.mp4" controls="true"></video>
-
-              <span class="close" title="Close">&times;</span>
-            </div>
-            <script>
-              const button = document.querySelector(".play_btn");
-              const close = document.querySelector(".close");
-              const trailer = document.querySelector(".trailer");
-              const video = document.querySelector("video");
-
-              button.addEventListener("click", () => {
-                trailer.style.visibility = "visible";
-                trailer.style.opacity = 1;
-              });
-
-              close.addEventListener("click", () => {
-                trailer.style.visibility = "hidden";
-                trailer.style.opacity = 0;
-
-                video.pause();
-                video.currentTime = 0;
-              });
-            </script>
-            <!-- Video close -->
-            <div class="morecards">
-              <p>
-                If you want to read more on Christmas wish, click
-                <span>EXPLORE MORE</span> for most post cards and wish.
-              </p>
-            </div>
-            <div class="btn_container">
-              <a href="christmas.html"
-                ><button class="btn" title="Explore More">
-                  <i class="fas fa-heart" style="font-size: 22px"></i> Explore
-                  more
-                </button></a
-              >
-            </div>
+          </div>
+          <div class="btn_container">
+            <a href="christmas.html"
+              ><button class="btn" title="Explore More">
+                <i class="fas fa-heart" style="font-size: 22px"></i> Explore
+                more
+              </button></a
+            >
           </div>
         </div>
       </div>
     </div>
+
     <div class="footer">
       <!-- Go to up JavaScript -->
       <script>
