@@ -9,11 +9,6 @@
 :root {
   --clr-red: #b11e31;
 }
-/*👉The whole body👈*/
-/*👉.body_container {
-  background: url("images/bg.svg");
-  background-attachment: fixed;
-}👈*/
 /*👉Navigation👈*/
 .nav_container {
   display: flex;
@@ -94,7 +89,6 @@
   width: 100%;
   min-width: 400px;
   padding-bottom: 180px;
-  /*👉  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);👈*/
 }
 /*👉Text container👈*/
 .text_container {
