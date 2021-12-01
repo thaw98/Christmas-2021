@@ -409,7 +409,7 @@
   justify-content: center;
 }
 .main {
-  padding-top: 190px;
+  padding-top: 205px;
   padding-bottom: 100px;
 }
 .mail {
@@ -465,12 +465,19 @@
   border-radius: 0px 0px 20px 20px;
   transition: 1s ease;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px 10px 0px 10px;
 }
-.mail .letter1 h2 {
-  text-transform: uppercase;
+.mail .letter1 span {
+  font-family: "Style Script", cursive;
+  font-size: 14px;
+}
+.mail .letter1 .right {
+  font-family: "Style Script", cursive;
+  font-size: 14px;
+  text-align: right;
 }
 .mail:hover .letter1 {
-  top: -140px;
+  top: -190px;
   transition: 1s 1s ease;
 }
 /*👉End👈*/
@@ -521,15 +528,79 @@
   top: 5%;
   border-radius: 6px;
   box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+  font-family: "Style Script", cursive;
 }
 .letter h1 {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   text-align: center;
   padding-top: 5px;
+  font-family: "Style Script", cursive;
+  font-size: 22px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.letter span {
+  font-family: "Style Script", cursive;
+  font-size: 14px;
+}
+.letter span p {
+  font-family: "Style Script", cursive;
+  font-size: 18px;
+  text-align: right;
+  font-weight: bold;
+}
+.envelope_img {
+  width: 45%;
+  height: 165px;
+}
+.envelope_photo {
+  text-align: center;
+  position: relative;
+}
+.envelope_photo .heart {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  animation-name: myheart;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  font-size: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+@keyframes myheart {
+  0% {
+    background-color: #ffffff;
+    color: #ff6c98;
+  }
+  40% {
+    color: #ff0000;
+    color: white;
+  }
+  50% {
+    background-color: #006cc4;
+    color: white;
+  }
+  80% {
+    background-color: #ac1572;
+    color: white;
+  }
+  100% {
+    transform: translate(50%, -10px);
+    background-color: #cc0d0d;
+    color: white;
+  }
 }
 .letter div {
   padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
 }
 .letter::after {
   content: "";
