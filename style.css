@@ -23,7 +23,7 @@ body {
 /*👉Body Container👈*/
 .body_container {
   width: 100%;
-  min-width: 400px;
+  min-width: 500px;
 }
 /*👉Navigation👈*/
 .nav_container {
@@ -34,7 +34,7 @@ body {
   background-color: var(--clr-red);
   font-size: 26px;
   width: 100%;
-  min-width: 400px;
+  min-width: 500px;
   box-shadow: 2px 2px 3px white;
   color: #ffffff;
   animation: borderglow 4s linear infinite;
@@ -145,7 +145,7 @@ body {
 }
 .welcome_container {
   text-align: center;
-  min-width: 400px;
+  min-width: 500px;
   padding-bottom: 70px;
 }
 
@@ -175,6 +175,8 @@ body {
 .welcome_container .para {
   white-space: pre-line;
   line-height: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /*👉Title animations👈*/
 .firsttitle {
@@ -242,6 +244,10 @@ body {
 }
 
 /*👉Another text👈*/
+.morecards {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .morecards p {
   white-space: pre-line;
 }
@@ -474,7 +480,7 @@ body {
   text-align: center;
   box-shadow: -5px -5px 20px white;
   padding-bottom: 25px;
-  min-width: 400px;
+  min-width: 500px;
   position: relative;
   z-index: 2;
   animation: borderglow2 4s linear infinite;
