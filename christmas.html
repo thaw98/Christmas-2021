@@ -59,38 +59,97 @@
               gifts on Christmas Eve of toys and candy to well-behaved children,
               and either coal or nothing to naughty children.
             </p>
-            <div class="video_container">
-              <!-- Video -->
-              <div class="video">
-                <button class="play_btn" title="Watch Now">
-                  <i class="fa fa-play"></i> Watch Now
-                </button>
-              </div>
-              <div class="trailer">
-                <video src="video/SantaClaus.mp4" controls="true"></video>
-
-                <span class="close" title="Close">&times;</span>
-              </div>
+            <div class="countdown">
+              <p class="cday">Christmas Days Until:</p>
+              <!-- Countdown -->
+              <p id="demo"></p>
               <script>
-                const button = document.querySelector(".play_btn");
-                const close = document.querySelector(".close");
-                const trailer = document.querySelector(".trailer");
-                const video = document.querySelector("video");
+                // Set the date we're counting down to
+                var countDownDate = new Date(
+                  "December 25, 2021 00:00:00"
+                ).getTime();
 
-                button.addEventListener("click", () => {
-                  trailer.style.visibility = "visible";
-                  trailer.style.opacity = 1;
-                });
+                // Update the count down every 1 second
+                var x = setInterval(function () {
+                  // Get today's date and time
+                  var now = new Date().getTime();
 
-                close.addEventListener("click", () => {
-                  trailer.style.visibility = "hidden";
-                  trailer.style.opacity = 0;
+                  // Find the distance between now and the count down date
+                  var distance = countDownDate - now;
 
-                  video.pause();
-                  video.currentTime = 0;
-                });
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor(
+                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                  );
+                  var minutes = Math.floor(
+                    (distance % (1000 * 60 * 60)) / (1000 * 60)
+                  );
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                  // Output the result in an element with id="demo"
+                  document.getElementById("demo").innerHTML =
+                    days +
+                    "d " +
+                    hours +
+                    "h " +
+                    minutes +
+                    "m " +
+                    seconds +
+                    "s ";
+
+                  // If the count down is over, write some text
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                  }
+                }, 1000);
               </script>
-              <!-- Video close -->
+            </div>
+            <div class="btn_group">
+              <div class="video_container">
+                <!-- Video -->
+                <div class="video">
+                  <button class="play_btn" title="Watch Now">
+                    <i class="fa fa-play"></i> Watch Now
+                  </button>
+                </div>
+                <div class="trailer">
+                  <video src="video/SantaClaus.mp4" controls="true"></video>
+
+                  <span class="close" title="Close">&times;</span>
+                </div>
+                <script>
+                  const button = document.querySelector(".play_btn");
+                  const close = document.querySelector(".close");
+                  const trailer = document.querySelector(".trailer");
+                  const video = document.querySelector("video");
+
+                  button.addEventListener("click", () => {
+                    trailer.style.visibility = "visible";
+                    trailer.style.opacity = 1;
+                  });
+
+                  close.addEventListener("click", () => {
+                    trailer.style.visibility = "hidden";
+                    trailer.style.opacity = 0;
+
+                    video.pause();
+                    video.currentTime = 0;
+                  });
+                </script>
+                <!-- Video close -->
+              </div>
+              <!-- Button to home -->
+
+              <div class="btn_container">
+                <a href="index.html"
+                  ><button class="btn" title="Go back to welcome page!">
+                    <i class="fas fa-home" style="font-size: 22px"></i> Welcome
+                    Page
+                  </button></a
+                >
+              </div>
             </div>
           </div>
           <div class="text_right">
@@ -99,7 +158,7 @@
         </div>
       </div>
 
-      <!-- Enevelope section -->
+      <!-- Envelope section -->
       <div class="envelope_big">
         <div class="envelope_heading">
           <img src="images/snowman.svg" class="icon" alt="Snow Man" />
@@ -108,36 +167,205 @@
         </div>
         <div class="envelope_container">
           <!-- 1 Envelope -->
-          <div class="main">
-            <div class="mail">
-              <div class="cover"></div>
-              <div class="letter">
-                <h2>Welcome</h2>
+          <div class="envelope">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+              <h1>Welome to my channel</h1>
+              <div>
+                <span>NoviceCoder</span>
               </div>
             </div>
           </div>
           <!-- 2 Envelope -->
-          <div class="main">
-            <div class="mail">
-              <div class="cover"></div>
-              <div class="letter">
-                <h2>Welcome</h2>
+          <div class="envelope">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+              <h1>Welome to my channel</h1>
+              <div>
+                <span>NoviceCoder</span>
               </div>
             </div>
           </div>
           <!-- 3 Envelope -->
-          <div class="main">
-            <div class="mail">
-              <div class="cover"></div>
-              <div class="letter">
-                <h2>Welcome</h2>
+          <div class="envelope">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+              <h1>Welome to my channel</h1>
+              <div>
+                <span>NoviceCoder</span>
+              </div>
+            </div>
+          </div>
+          <!-- 4 Envelope -->
+          <div class="envelope">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+              <h1>Welome to my channel</h1>
+              <div>
+                <span>NoviceCoder</span>
+              </div>
+            </div>
+          </div>
+          <!-- 5 Envelope -->
+          <div class="envelope">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+              <h1>Welome to my channel</h1>
+              <div>
+                <span>NoviceCoder</span>
+              </div>
+            </div>
+          </div>
+          <!-- 6 Envelope -->
+          <div class="envelope">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+              <h1>Welome to my channel</h1>
+              <div>
+                <span>NoviceCoder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="envelope_to_mylove">
+          <div class="envelope_heading2">
+            <img src="images/love.png" class="icon2" alt="Love" />
+            <h1>Letter to my beloved soulmate</h1>
+            <img src="images/love2.png" class="icon2" alt="Love Letter" />
+          </div>
+          <div class="envelope_to_mylove_container">
+            <!-- Envelope to my love -->
+            <div class="main">
+              <div class="mail">
+                <div class="cover"></div>
+                <div class="letter1">
+                  <h2>Welcome</h2>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Contact section -->
       <div class="contact">
-        <div class="contact_container"></div>
+        <div class="contact_header">
+          <img
+            src="images/santa_letter.png"
+            class="contact1"
+            alt="Contact to Santa"
+          />
+          <h1>Contact to Santa</h1>
+          <img
+            src="images/contact.png"
+            class="contact1"
+            alt="Contact to Santa"
+          />
+        </div>
+        <div class="contact_para">
+          <p>
+            Now, you can reach the big guy in the North Pole by mail!
+            <br />Leave your Christmas Wish for Santa.
+          </p>
+        </div>
+
+        <div class="contact_container">
+          <div class="contactbox">
+            <div class="contact_form_container">
+              <div class="container">
+                <div class="content">
+                  <div class="image-box">
+                    <img
+                      src="images/santa_reading.jpg"
+                      alt="Santa is reading messages."
+                    />
+                  </div>
+                  <form action="christmas.html" method="GET">
+                    <div class="topic"><h2>Dear Santa...</h2></div>
+                    <div class="input-box">
+                      <input type="text" required />
+                      <label
+                        ><i class="fas fa-user fa-fw"></i> Enter your
+                        name</label
+                      >
+                    </div>
+                    <div class="input-box">
+                      <input type="email" required />
+                      <label
+                        ><i class="fas fa-envelope fa-fw"></i> Enter your
+                        email</label
+                      >
+                    </div>
+                    <div class="message-box">
+                      <textarea></textarea>
+                      <label
+                        ><i class="fas fa-pencil-alt fa-fw"></i> Drop your
+                        message</label
+                      >
+                    </div>
+                    <div class="genderchoose">
+                      <label for="gender">&nbsp;Gender: </label> &nbsp;&nbsp;
+                      <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="male"
+                      />&nbsp; <label for="male">Male</label> &nbsp;&nbsp;
+                      <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                      />&nbsp;
+                      <label for="female">Female</label>
+                    </div>
+                    <div class="input-box">
+                      <button type="submit" title="Send Message to Santa Claus">
+                        <i class="fas fa-paper-plane fa-fw"></i>Send Message
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="footer">
+        <!-- Go to up JavaScript -->
+        <script>
+          var mybutton = document.getElementById("myBtn");
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+        </script>
+        <div class="upbutton_container">
+          <button onclick="topFunction()" title="⮝UP" class="up_btn">
+            <i class="fas fa-chevron-up"></i>
+          </button>
+        </div>
+        <p class="footer_text">
+          <small>
+            <p>&copy; 2021 Pyae Phyo Thaw</p>
+            <p>
+              Made with <i class="fas fa-heart fa-fw"></i> from
+              <a href="https://github.com/thaw98" target="_blank" class="author"
+                >Pyae Phyo Thaw</a
+              >.
+            </p>
+            <p>
+              <i class="fas fa-star fa-fw"></i> Created on: 1st December 2021
+              <i class="fas fa-star fa-fw"></i>
+            </p>
+          </small>
+        </p>
       </div>
     </div>
   </body>
